@@ -1,0 +1,14 @@
+[package]
+name = "bevy-procedural-grass-editor"
+version = "0.1.0"
+edition = "2021"
+description = "An Egui-based editor for the bevy-procedural-grass crate"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+bevy-procedural-grass = { path = "../" }
+bevy = "0.12.1"
+
+[lints]
+workspace = true
