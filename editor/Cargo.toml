@@ -1,23 +1,20 @@
 [package]
 name = "editor"
-version = "0.1.0"
-edition = "2021"
 description = "An Egui-based editor for the bevy-procedural-grass crate"
-publish = false
+edition = "2021"
 license = "MIT OR Apache-2.0"
+publish = false
 
 [dependencies]
-bevy-procedural-grass = { path = "../" }
-components = { path = "../components" }
-# IMPORTANT: when using hot reloading with `hot-lib-reloader`, you must use the exact same version of all dependencies in all crates!
 bevy = "0.12.1"
-bevy_editor_pls = { version = "0.7.0", optional = true }
-hot-lib-reloader = { version = "0.7.0", optional = true }
-bevy-inspector-egui = { version = "0.22.1", optional = true }
+bevy-inspector-egui = "0.22.1"
+bevy_editor_pls = "0.7.0"
+
+[dependencies.bevy-procedural-grass]
+path = "../"
 
 [lints]
 workspace = true
 
-[features]
-default = ["hot_reload"]
-hot_reload = ["bevy/dynamic_linking", "bevy-procedural-grass/hot_reload", "components/hot_reload"]
+[package.metadata]
+hot_reload_features = ["bevy/dynamic_linking", "bevy/embedded_watcher"]

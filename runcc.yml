@@ -1,5 +1,0 @@
-commands:
-  bin: |
-    cargo run -p editor --features hot_reload
-  systems: |
-    cargo watch -w src -w components -x "build --features hot_reload"

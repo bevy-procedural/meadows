@@ -12,8 +12,13 @@ repository = "https://github.com/bevy-procedural/grass"
 documentation = "https://docs.bevy-procedural.org/grass"
 rust-version = "1.76.0"
 
+[lib]
+name = "bevy_procedural_grass"
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
 [workspace]
-members = ["editor", "components"]
+members = ["editor"]
 
 [workspace.lints.clippy]
 type_complexity = "allow"
@@ -37,27 +42,27 @@ unsafe_op_in_unsafe_fn = "warn"
 workspace = true
 
 [dependencies]
-components = { path = "components" }
-# IMPORTANT: when using hot reloading with `hot-lib-reloader`, you must use the exact same version of all dependencies in all crates!
 bevy = "0.12.1"
-bevy_editor_pls = { version = "0.7.0", optional = true }
-hot-lib-reloader = { version = "0.7.0", optional = true }
-bevy-inspector-egui = { version = "0.22.1", optional = true }
-
-[features]
-default = []
-hot_reload = [
-    "bevy/dynamic_linking",
-    "components/hot_reload",
-    "dep:hot-lib-reloader",
-    "dep:bevy_editor_pls",
-    "dep:bevy-inspector-egui",
-]
+bevy-inspector-egui = "0.22.1"
 
 [[example]]
 name = "simple"
 path = "examples/simple.rs"
 doc-scrape-examples = true
 
+# Optional: Uncommenting the following improves compile times, but reduces the amount of debug info to 'line number tables only'
+# In most cases the gains are negligible, but if you are on macos and have slow compile times you should see significant gains.
+#[profile.dev]
+#debug = 1
+
+# Enable a small amount of optimization in debug mode
+[profile.dev]
+opt-level = 1
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for our code:
 [profile.dev.package."*"]
 opt-level = 3
+
+[profile.dev.package.gfx-backend-vulkan]
+opt-level = 3
+debug-assertions = false

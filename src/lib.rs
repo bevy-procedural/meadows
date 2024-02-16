@@ -1,7 +1,27 @@
 use bevy::prelude::*;
-use components::{MainCamera, Settings};
+use bevy_inspector_egui::{inspector_options::ReflectInspectorOptions, InspectorOptions};
 
-#[no_mangle]
+#[derive(Component)]
+pub struct MainCamera;
+
+#[derive(Reflect, Resource, InspectorOptions)]
+#[reflect(Resource, InspectorOptions)]
+pub struct Settings {
+    #[inspector(min = 0.0, max = 10.0)]
+    pub box_size: f32,
+    #[inspector(min = 0.0, max = 10.0)]
+    pub box_thickness: f32,
+}
+
+impl Default for Settings {
+    fn default() -> Self {
+        Self {
+            box_size: 2.0,
+            box_thickness: 0.15,
+        }
+    }
+}
+
 pub fn setup_grass(
     mut commands: Commands,
     mut meshes: ResMut<Assets<Mesh>>,
@@ -144,8 +164,6 @@ pub fn setup_grass(
     ));
 }
 
-
-#[no_mangle]
 pub fn update_grass(settings: Res<Settings>) {
-    println!("update")
+    //println!("update")
 }
