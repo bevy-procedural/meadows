@@ -4,6 +4,8 @@ The objective of the [Bevy Procedural Project](https://bevy-procedural.org) is t
 
 [Bevy Procedural Project](https://bevy-procedural.org/grass) is concerned with generating procedural grass in 3d and 2d using realistic as well as more stylized approaches.
 
+Start the editor using `cargo runcc` resp. `cargo runcc -c runcc-windows.yml`
+
 ## WARNING: This repository is practically empty
 
 The Bevy Procedural ecosystem is presently in its nascent phase. Expect frequent API modifications as it is under active development, with many features yet to be implemented. We highly encourage contributions to enrich the project!

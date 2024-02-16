@@ -13,7 +13,7 @@ documentation = "https://docs.bevy-procedural.org/grass"
 rust-version = "1.76.0"
 
 [workspace]
-members = ["editor"]
+members = ["editor", "components"]
 
 [workspace.lints.clippy]
 type_complexity = "allow"
@@ -36,13 +36,28 @@ unsafe_op_in_unsafe_fn = "warn"
 [lints]
 workspace = true
 
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+components = { path = "components" }
+# IMPORTANT: when using hot reloading with `hot-lib-reloader`, you must use the exact same version of all dependencies in all crates!
 bevy = "0.12.1"
+bevy_editor_pls = { version = "0.7.0", optional = true }
+hot-lib-reloader = { version = "0.7.0", optional = true }
+bevy-inspector-egui = { version = "0.22.1", optional = true }
+
+[features]
+default = []
+hot_reload = [
+    "bevy/dynamic_linking",
+    "components/hot_reload",
+    "dep:hot-lib-reloader",
+    "dep:bevy_editor_pls",
+    "dep:bevy-inspector-egui",
+]
 
 [[example]]
 name = "simple"
 path = "examples/simple.rs"
 doc-scrape-examples = true
+
+[profile.dev.package."*"]
+opt-level = 3

@@ -1,0 +1,5 @@
+commands:
+  bin: |
+    cargo watch -w editor -w components -x "run -p editor --features hot_reload --target-dir target-bin"
+  systems: |
+    cargo watch -w src -w components -x "build --features hot_reload"
