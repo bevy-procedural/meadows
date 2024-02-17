@@ -399,14 +399,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy-procedural-grass"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy-inspector-egui",
-]
-
-[[package]]
 name = "bevy_a11y"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1675,8 +1667,8 @@ version = "0.0.0"
 dependencies = [
  "bevy",
  "bevy-inspector-egui",
- "bevy-procedural-grass",
  "bevy_editor_pls",
+ "procedural-grass",
 ]
 
 [[package]]
@@ -3138,6 +3130,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2422ad645d89c99f8f3e6b88a9fdeca7fabeac836b1002371c4367c8f984aae"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "procedural-grass"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy-inspector-egui",
 ]
 
 [[package]]

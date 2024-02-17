@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use bevy_procedural_grass::*;
+use procedural_grass::*;
 use components::Settings;
 
 fn main() {

@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use bevy_editor_pls::prelude::*;
-use bevy_procedural_grass::*;
+use procedural_grass::*;
 use std::env;
 
 pub fn main() {

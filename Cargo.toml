@@ -1,5 +1,5 @@
 [package]
-name = "bevy-procedural-grass"
+name = "procedural-grass"
 description = "A procedural grass system for the Bevy game engine."
 version = "0.1.0"
 edition = "2021"
@@ -13,7 +13,7 @@ documentation = "https://docs.bevy-procedural.org/grass"
 rust-version = "1.76.0"
 
 [lib]
-name = "bevy_procedural_grass"
+name = "procedural_grass"
 path = "src/lib.rs"
 crate-type = ["rlib"]
 
