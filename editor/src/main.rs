@@ -19,6 +19,7 @@ pub fn main() {
         .add_plugins(EditorPlugin::on_second_monitor_fullscreen(
             EditorPlugin::default(),
         ))
+        .add_systems(Update, bevy::window::close_on_esc)
         .add_systems(Startup, setup_grass)
         .add_systems(Update, update_grass)
         .run();

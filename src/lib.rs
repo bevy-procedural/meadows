@@ -142,12 +142,10 @@ pub fn setup_grass(
                 ..Default::default()
             });
         });
+
     // directional light
     commands.spawn(DirectionalLightBundle {
-        directional_light: DirectionalLight {
-            illuminance: 10000.0,
-            ..default()
-        },
+        directional_light: DirectionalLight::default(),
         transform: Transform::from_rotation(Quat::from_rotation_x(-std::f32::consts::PI / 2.0)),
         ..Default::default()
     });
@@ -155,7 +153,7 @@ pub fn setup_grass(
     // camera
     commands.spawn((
         Camera3dBundle {
-            transform: Transform::from_xyz(0.0, box_offset, 4.0)
+            transform: Transform::from_xyz(0.0, box_offset, 4.00)
                 .looking_at(Vec3::new(0.0, box_offset, 0.0), Vec3::Y),
             ..Default::default()
         },

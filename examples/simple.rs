@@ -1,6 +1,5 @@
 use bevy::prelude::*;
 use procedural_grass::*;
-use components::Settings;
 
 fn main() {
     App::new()

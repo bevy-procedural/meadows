@@ -1,10 +1,23 @@
-# Bevy Procedural Grass
+# Bevy Procedural: Grass
+
+
+<p align="center">
+  <a href="https://crates.io/crates/procedural-grass">
+      <img src="https://img.shields.io/crates/v/procedural-grass.svg" alt="crates.io">
+  </a>
+  <a href="https://github.com/bevy-procedural/grass/actions">
+      <img src="https://github.com/bevy-procedural/grass/actions/workflows/rust.yml/badge.svg" alt="Build Status">
+  </a>
+  <a href="https://docs.rs/procedural-grass">
+      <img src="https://docs.rs/procedural-grassh/badge.svg" alt="documentation">
+  </a>
+</p>
 
 The objective of the [Bevy Procedural Project](https://bevy-procedural.org) is to furnish a comprehensive suite of packages for the generation of procedural graphics, unified by a consistent API.
 
-[Bevy Procedural Project](https://bevy-procedural.org/grass) is concerned with generating procedural grass in 3d and 2d using realistic as well as more stylized approaches.
+[Procedural Grass](https://bevy-procedural.org/grass) is concerned with generating procedural grass in 3d and 2d using realistic as well as more stylized approaches.
 
-Run the editor example using `cargo watch -w editor -s src -x "run -p editor"`.
+Run the editor example using `cargo watch -w editor -w src -x "run -p editor"`.
 
 ## WARNING: This repository is practically empty
 
