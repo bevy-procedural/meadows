@@ -1,6 +1,5 @@
 # Bevy Procedural: Grass
 
-
 <p align="center">
   <a href="https://crates.io/crates/procedural-grass">
       <img src="https://img.shields.io/crates/v/procedural-grass.svg" alt="crates.io">
@@ -9,7 +8,7 @@
       <img src="https://github.com/bevy-procedural/grass/actions/workflows/rust.yml/badge.svg" alt="Build Status">
   </a>
   <a href="https://docs.rs/procedural-grass">
-      <img src="https://docs.rs/procedural-grassh/badge.svg" alt="documentation">
+      <img src="https://docs.rs/procedural-grass/badge.svg" alt="documentation">
   </a>
 </p>
 
