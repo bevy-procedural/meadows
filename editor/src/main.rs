@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use bevy_editor_pls::prelude::*;
-use procedural_grass::*;
+use procedural_meadows::*;
 use std::env;
 
 pub fn main() {
@@ -20,7 +20,7 @@ pub fn main() {
             EditorPlugin::default(),
         ))
         .add_systems(Update, bevy::window::close_on_esc)
-        .add_systems(Startup, setup_grass)
-        .add_systems(Update, update_grass)
+        .add_systems(Startup, setup_meadows)
+        .add_systems(Update, update_meadows)
         .run();
 }

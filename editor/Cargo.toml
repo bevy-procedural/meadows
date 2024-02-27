@@ -1,6 +1,6 @@
 [package]
 name = "editor"
-description = "An Egui-based editor for the procedural-grass crate"
+description = "An Egui-based editor for the bey_procedural_meadows crate"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 publish = false
@@ -10,7 +10,7 @@ bevy = "0.12.1"
 bevy-inspector-egui = "0.22.1"
 bevy_editor_pls = "0.7.0"
 
-[dependencies.procedural-grass]
+[dependencies.bey_procedural_meadows]
 path = "../"
 
 [lints]

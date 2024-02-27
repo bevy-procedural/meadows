@@ -1198,6 +1198,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "bey_procedural_meadows"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy-inspector-egui",
+]
+
+[[package]]
 name = "bindgen"
 version = "0.69.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1668,7 +1676,7 @@ dependencies = [
  "bevy",
  "bevy-inspector-egui",
  "bevy_editor_pls",
- "procedural-grass",
+ "bey_procedural_meadows",
 ]
 
 [[package]]
@@ -3130,14 +3138,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2422ad645d89c99f8f3e6b88a9fdeca7fabeac836b1002371c4367c8f984aae"
 dependencies = [
  "unicode-ident",
-]
-
-[[package]]
-name = "procedural-grass"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy-inspector-egui",
 ]
 
 [[package]]

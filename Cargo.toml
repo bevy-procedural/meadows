@@ -1,19 +1,19 @@
 [package]
-name = "procedural-grass"
-description = "A procedural grass system for the Bevy game engine."
+name = "bey_procedural_meadows"
+description = "A procedural meadows system for the Bevy game engine."
 version = "0.1.0"
 edition = "2021"
 categories = ["graphics", "rendering", "game-development", "simulation"]
-keywords = ["gamedev", "graphics", "bevy", "procedural", "grass"]
-homepage = "https://bevy-procedural.org/grass"
+keywords = ["gamedev", "graphics", "bevy", "procedural", "meadows"]
+homepage = "https://bevy-procedural.org/meadows"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/bevy-procedural/grass"
-documentation = "https://docs.bevy-procedural.org/grass"
+repository = "https://github.com/bevy-procedural/meadows"
+documentation = "https://docs.bevy-procedural.org/meadows"
 rust-version = "1.76.0"
 
 [lib]
-name = "procedural_grass"
+name = "procedural_meadows"
 path = "src/lib.rs"
 crate-type = ["rlib"]
 

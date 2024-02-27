@@ -22,7 +22,7 @@ impl Default for Settings {
     }
 }
 
-pub fn setup_grass(
+pub fn setup_meadows(
     mut commands: Commands,
     mut meshes: ResMut<Assets<Mesh>>,
     mut materials: ResMut<Assets<StandardMaterial>>,
@@ -162,6 +162,6 @@ pub fn setup_grass(
     ));
 }
 
-pub fn update_grass(settings: Res<Settings>) {
+pub fn update_meadows(settings: Res<Settings>) {
     //println!("update")
 }
